@@ -101,7 +101,6 @@ export default function ResponsiveDrawer() {
         aria-label="mailbox folders"
       >
         <Drawer
-          container={document.body}
           variant="temporary"
           open={mobileOpen}
           onTransitionEnd={handleDrawerTransitionEnd}

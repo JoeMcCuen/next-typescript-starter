@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Container } from "postcss";
+import { Box } from "@mui/material";
+import ResponsiveDrawer from "@/components/drawer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Box>
+          <ResponsiveDrawer />
+          {children}
+        </Box>
+      </body>
     </html>
   );
 }
